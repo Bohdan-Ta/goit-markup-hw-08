@@ -1,0 +1,40 @@
+.modal-win {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 528px;
+    min-height: 581px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+    border-radius: 4px;
+    background-color: var(--background-color);
+}
+.modal-win__closed {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 30px;
+    height: 30px;
+
+    border: none;
+    background: var(--background-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    cursor: pointer;
+    &:hover .modal-win__btn-closed {
+        fill: var(--second-color-link);
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
+.modal-win__btn-closed {
+    content: "";
+    width: 11px;
+    height: 11px;
+    fill: var(--half-logo);
+}

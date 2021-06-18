@@ -1,0 +1,29 @@
+.portfolio__overlay {
+    position: relative;
+    overflow: hidden;
+    &__text {
+        content: "";
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+        padding: 63px 24px;
+
+        transform: translateY(100%);
+        transition: transform 250ms ease;
+
+        background: rgba(33, 150, 243, 0.9);
+        font-size: 18px;
+        line-height: 1.56;
+        color: var(--background-color);
+        overflow: auto;
+    }
+}
+
+.portfolio__cards__container:hover .portfolio__overlay__text,
+.portfolio__cards__container:focus .portfolio__overlay__text {
+    transform: translateY(0%);
+}

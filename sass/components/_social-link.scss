@@ -1,0 +1,31 @@
+.section-team__social {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background-color: var(--background-color);
+    border-radius: 50%;
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        background-color: var(--second-color-link);
+    }
+    &:hover .social__icon,
+    &:focus .social__icon {
+        fill: #ffffff;
+    }
+
+    .social__icon {
+        content: "";
+        width: 20px;
+        height: 20px;
+        fill: var(--color-social-icon);
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}

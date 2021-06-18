@@ -1,0 +1,61 @@
+.features__heading {
+    visibility: hidden;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px
+}
+
+.feature__title {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: var(--text-item);
+}
+
+.features__ul {
+    display: flex;
+}
+
+.feature__list:not(:last-child) {
+    margin-right: 30px
+}
+
+.feature__list::before {
+    margin-bottom: 30px;
+    display: block;
+    content: "";
+    width: 270px;
+    height: 120px;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: var(--background-our-team);
+}
+
+.icon-antena::before {
+    background-image: url(../images/icon-antenna.svg);
+    background-size: 70px, 70px;
+}
+
+.icon-oclock::before {
+    background-image: url(../images/icon-oclock.svg);
+    background-size: 70px, 70px;
+}
+
+.icon-diagrama::before {
+    background-image: url(../images/icon-diagrama.svg);
+    background-size: 70px, 70px;
+}
+
+.icon-astronavt::before {
+    background-image: url(../images/icon-astronaut.svg);
+    background-size: 70px, 70px;
+}
+
+.features__paragraph {
+    line-height: 1.71;
+}
