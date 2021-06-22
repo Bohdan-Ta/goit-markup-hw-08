@@ -1,6 +1,78 @@
 .header {
-    margin-bottom: -1px;
+    margin-bottom: 1px;
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: #ececec;
+    &-container {
+        display: flex;
+        align-items: center;
+    }
+}
+// -> 767
+@media screen and (max-width: 767px) {
+    .header {
+        position: relative;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        &-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
+// 768+
+@media screen and (min-width: 768px) {
+    .header {
+        padding-top: 21px;
+        padding-bottom: 21px;
+
+        &-nav {
+            display: flex;
+            align-items: center;
+            margin-right: 84px;
+        }
+        &-nav__list {
+            display: flex;
+            align-items: center;
+        }
+    }
+    .logo_top {
+        margin-right: 88px;
+    }
+    .nav__item:not(:last-child) {
+        margin-right: 50px;
+    }
+}
+
+// 1200+
+@media screen and (min-width: 1200px) {
+    .header {
+        justify-content: baseline;
+        padding-top: 24px;
+        padding-bottom: 25px;
+
+        &-nav {
+            display: flex;
+            align-items: center;
+        }
+        &-nav__list {
+            display: flex;
+            align-items: center;
+        }
+        &-contacts {
+            display: flex;
+            margin-left: auto;
+        }
+    }
+    .logo_top {
+        display: inline;
+        margin-right: 93px;
+    }
+    .nav__item:not(:last-child) {
+        margin-right: 50px;
+    }
+    .contacts__item:not(:last-child) {
+        margin-right: 30px;
+    }
 }

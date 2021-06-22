@@ -3,10 +3,11 @@
     clip: rect(0 0 0 0);
     width: 1px;
     height: 1px;
-    margin: -1px
+    margin: -1px;
 }
 
 .feature__title {
+    text-align: center;
     margin-bottom: 10px;
     font-weight: 700;
     font-size: 14px;
@@ -16,18 +17,18 @@
 }
 
 .features__ul {
-    display: flex;
+    // display: flex;
 }
 
-.feature__list:not(:last-child) {
-    margin-right: 30px
-}
+// .feature__list:not(:last-child) {
+//     margin-right: 30px;
+// }
 
 .feature__list::before {
     margin-bottom: 30px;
     display: block;
     content: "";
-    width: 270px;
+    width: 100%;
     height: 120px;
     border-radius: 4px;
     background-repeat: no-repeat;

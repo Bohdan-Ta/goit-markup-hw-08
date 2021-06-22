@@ -1,0 +1,46 @@
+@media screen and (max-width: 767px) {
+    .menu-mob {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #ffffff;
+        overflow: auto;
+
+        opacity: 1;
+        visibility: hidden;
+        pointer-events: none;
+
+        &__container {
+            position: relative;
+            padding-top: 48px;
+            padding-bottom: 48px;
+        }
+
+        &.is-open {
+            opacity: 0;
+            visibility: visible;
+            pointer-events: auto;
+        }
+        &__sandwich-btn {
+            padding: 0;
+            border: none;
+            background-color: inherit;
+            line-height: 0;
+            &:hover,
+            &:focus {
+                fill: var(--second-color-link);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .menu-mob {
+        display: none;
+        &__sandwich-btn {
+            display: none;
+        }
+    }
+}

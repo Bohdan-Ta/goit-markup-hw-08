@@ -14,7 +14,7 @@
 }
 
 .addres__link-google {
-    display: inline-block;
+    // display: inline-block;
     color: var(--background-color);
     text-decoration: none;
     line-height: 1.7;
@@ -41,7 +41,7 @@
 
 /*=====footer social block=====*/
 .footer-page__social {
-    display: inline-block;
+    // display: inline-block;
     margin-left: 70px;
     width: 206px;
 }
@@ -57,8 +57,8 @@
 }
 
 .flex-baseline {
-    display: flex;
-    align-items: baseline;
+    // display: flex;
+    // align-items: baseline;
 }
 
 .footer-page__social--ul {
@@ -85,7 +85,7 @@
 /*footer mail-block*/
 /*=============================*/
 .footer-page__sent-form {
-    margin-left: 93px;
+    // margin-left: 93px;
 }
 
 .sent-form_indent {
@@ -93,11 +93,11 @@
 }
 
 .sent-form_flex {
-    display: flex;
+    // display: flex;
 }
 
 .sent-form__mail {
-    width: 358px;
+    width: 100%;
     height: 50px;
     padding: 15px;
     font-size: 16px;
@@ -115,7 +115,7 @@
 .sent-form__submit {
     position: relative;
     padding: 0px;
-    padding-right: 28px;
+    // padding-right: 28px;
     &:focus,
     &:hover {
         background: var(--btn-hover);

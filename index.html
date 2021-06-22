@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=1600, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -19,37 +19,69 @@
 
 <body>
     <header class="header">
-        <div class="container flex ">
-            <nav class="flex">
-                <a class="logo logo_top" href="./index.html">Web<span class="logo_top_black">Studio</span></a>
-                <ul class="nav flex">
+        <div class="container header-container">
+            <a class="logo logo_top" href="./index.html">Web<span class="logo_top_black">Studio</span></a>
+            <button type="button" class="menu-mob__sandwich-btn">
+                <svg width="40px" height="40px" aria-label="Переключатель мобильного меню">
+                    <use href="./images/symbol-defs.svg#icon-menu_40px"></use>
+                </svg> </button>
+            <nav class="header-nav">
+                <ul class="header-nav__list">
                     <li class="nav__item"><a class="nav__link current" href="./index.html">Студия</a></li>
                     <li class="nav__item"><a class="nav__link" href="./portfolio.html">Портфолио</a></li>
                     <li class="nav__item"><a class="nav__link" href="">Контакты</a></li>
                 </ul>
             </nav>
-            <ul class="contacts flex">
-                <li class="contacts__item"><a class="contacts__link flex" href="mailto:info@devstudio.com">
-                        <svg class="contacts__icon-envelope" width="16px" height="12px">
+            <ul class="header-contacts">
+                <li class="contacts__item contacts__item-margin"><a class="contacts__link flex"
+                        href="mailto:info@devstudio.com">
+                        <svg class="contacts__icon-envelope">
                             <use href="./images/symbol-defs.svg#icon-envelope"> </use>
                         </svg>info@devstudio.com</a>
                 </li>
                 <li class="contacts__item"><a class="contacts__link flex" href="tel:+380961111111">
-                        <svg class="contacts__icon-phone" width="10px" height="16px">
+                        <svg class="contacts__icon-phone">
                             <use href="./images/symbol-defs.svg#icon-smartphone"> </use>
                         </svg>+38 096 111 11 11</a>
                 </li>
             </ul>
         </div>
+        <div class="menu-mob">
+            <div class="menu-mob__container">
+                <button type="button" class="menu-mob__close-btn">
+                    <svg width="40px" height="40px" aria-label="Кнопка закрытия мобильного меню">
+                        <use class="icon-mob-close" href="./images/symbol-defs.svg#icon-close_40px"></use>
+                    </svg> </button>
+                <a class="logo logo_top" href="./index.html">Web<span class="logo_top_black">Studio</span></a>
+                <ul class="menu-mob__nav">
+                    <li class="nav__item"><a class="nav__link current" href="./index.html">Студия</a></li>
+                    <li class="nav__item"><a class="nav__link" href="./portfolio.html">Портфолио</a></li>
+                    <li class="nav__item"><a class="nav__link" href="">Контакты</a></li>
+                </ul>
+                <ul class="menu-mob__contacts">
+                    <li class="contacts__item"><a class="contacts__link"
+                            href="mailto:info@devstudio.com">info@devstudio.com</a>
+                    </li>
+                    <li class="contacts__item"><a class="contacts__link" href="tel:+380961111111">+38 096 111 11 11</a>
+                    </li>
+                </ul>
+                <ul class="menu-mob__social">
+                    <li class=menu-mob__social-item><a href=""></a>Instagram</li>
+                    <li class=menu-mob__social-item><a href=""></a>Twitter</li>
+                    <li class=menu-mob__social-item><a href=""></a>Facebook</li>
+                    <li class=menu-mob__social-item><a href=""></a>Linkedin</li>
+                </ul>
+            </div>
+        </div>
     </header>
     <main>
         <!--Banner section-->
-        <section class="hero">
+        <!-- <section class="hero">
             <div class="container">
                 <h1 class="hero__heading">Эффективные решения <br> для вашего бизнеса</h1>
                 <button data-modal-open class="button" type="button">Заказать услугу</button>
             </div>
-        </section>
+        </section> -->
 
         <section class="features section">
             <div class="container">
@@ -346,6 +378,7 @@
         <!--========END MODAL WINDOW=========-->
         <!--JS-->
         <script src="./JS/modal.js"></script>
+        <script src="./JS/menu-mob.js"></script>
     </div>
 
 </body>
