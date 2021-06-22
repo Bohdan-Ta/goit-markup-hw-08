@@ -6,24 +6,21 @@
     color: var(--second-color-link);
     text-decoration: none;
 }
-@media screen and (min-width: 1200px) {
-    .logo {
-        font-size: 26px;
-        line-height: 1.2;
-    }
+
+.logo_top_black {
+    color: var(--half-logo);
 }
 
-.logo_top {
-    // display: inline;
-    // margin-right: 93px;
-    .logo_top_black {
-        color: var(--half-logo);
-    }
-}
 .logo_footer {
     // display: inline-block;
     margin-bottom: 20px;
     .logo_footer_white {
         color: var(--background-color);
+    }
+}
+@media screen and (min-width: 1200px) {
+    .logo {
+        font-size: 26px;
+        line-height: 1.2;
     }
 }

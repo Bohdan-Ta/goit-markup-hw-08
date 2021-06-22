@@ -21,7 +21,7 @@
     <header class="header">
         <div class="container header-container">
             <a class="logo logo_top" href="./index.html">Web<span class="logo_top_black">Studio</span></a>
-            <button type="button" class="menu-mob__sandwich-btn">
+            <button data-menu-button type="button" class="menu-mob__sandwich-btn">
                 <svg width="40px" height="40px" aria-label="Переключатель мобильного меню">
                     <use href="./images/symbol-defs.svg#icon-menu_40px"></use>
                 </svg> </button>
@@ -46,29 +46,33 @@
                 </li>
             </ul>
         </div>
-        <div class="menu-mob">
+        <div data-menu class="menu-mob">
             <div class="menu-mob__container">
-                <button type="button" class="menu-mob__close-btn">
+                <button data-menu-close type="button" class="menu-mob__close-btn">
                     <svg width="40px" height="40px" aria-label="Кнопка закрытия мобильного меню">
                         <use class="icon-mob-close" href="./images/symbol-defs.svg#icon-close_40px"></use>
                     </svg> </button>
-                <a class="logo logo_top" href="./index.html">Web<span class="logo_top_black">Studio</span></a>
                 <ul class="menu-mob__nav">
-                    <li class="nav__item"><a class="nav__link current" href="./index.html">Студия</a></li>
-                    <li class="nav__item"><a class="nav__link" href="./portfolio.html">Портфолио</a></li>
-                    <li class="nav__item"><a class="nav__link" href="">Контакты</a></li>
+                    <li class="menu-mob__item"><a class="nav__link" href="./index.html">Студия</a></li>
+                    <li class="menu-mob__item"><a class="nav__link" href="./portfolio.html">Портфолио</a></li>
+                    <li class="menu-mob__item"><a class="nav__link" href="">Контакты</a></li>
                 </ul>
                 <ul class="menu-mob__contacts">
-                    <li class="contacts__item"><a class="contacts__link"
-                            href="mailto:info@devstudio.com">info@devstudio.com</a>
+                    <li class="menu-mob__contacts-item"><a class="menu-mob__tel-link link" href="tel:+380961111111">+38
+                            096 111
+                            11 11</a>
                     </li>
-                    <li class="contacts__item"><a class="contacts__link" href="tel:+380961111111">+38 096 111 11 11</a>
+                    <li class="menu-mob__contacts-item"><a class="menu-mob__mail-link link"
+                            href="mailto:info@devstudio.com">info@devstudio.com</a>
                     </li>
                 </ul>
                 <ul class="menu-mob__social">
                     <li class=menu-mob__social-item><a href=""></a>Instagram</li>
+                    <span class="vertical-line"></span>
                     <li class=menu-mob__social-item><a href=""></a>Twitter</li>
+                    <span class="vertical-line"></span>
                     <li class=menu-mob__social-item><a href=""></a>Facebook</li>
+                    <span class="vertical-line"></span>
                     <li class=menu-mob__social-item><a href=""></a>Linkedin</li>
                 </ul>
             </div>
@@ -145,7 +149,7 @@
                 <h2 class="section-team__heading">Наша команда</h2>
                 <ul class="section-team--lu">
                     <li class="section-team__item">
-                        <img src="./images/img-id.jpg" alt="man" width="270" height="260">
+                        <img src="./images/img-id.jpg" alt="man">
                         <div class="section-team__item--indent">
                             <h3 class="section-team__title">Игорь Демьяненко</h3>
                             <p class="section-team__paragraph">Product Designer</p>
@@ -170,7 +174,7 @@
                         </div>
                     </li>
                     <li class="section-team__item">
-                        <img src="./images/img-or.jpg" alt="woman" width="270" height="260">
+                        <img src="./images/img-or.jpg" alt="woman">
                         <div class="section-team__item--indent">
                             <h3 class="section-team__title">Ольга Репина</h3>
                             <p class="section-team__paragraph">Frontend Developer</p>
@@ -195,7 +199,7 @@
                         </div>
                     </li>
                     <li class="section-team__item">
-                        <img src="./images/img-nt.jpg" alt="man" width="270" height="260">
+                        <img src="./images/img-nt.jpg" alt="man">
                         <div class="section-team__item--indent">
                             <h3 class="section-team__title">Николай Тарасов</h3>
                             <p class="section-team__paragraph">Marketing</p>
@@ -220,7 +224,7 @@
                         </div>
                     </li>
                     <li class="section-team__item">
-                        <img src="./images/img-me.jpg" alt="man" width="270" height="260">
+                        <img src="./images/img-me.jpg" alt="man">
                         <div class="section-team__item--indent">
                             <h3 class="section-team__title">Михаил Ермаков</h3>
                             <p class="section-team__paragraph">UI Designer</p>
