@@ -1410,6 +1410,10 @@ img {
   }
 }
 
+.menu-mob__social-item {
+  display: inline-flex;
+}
+
 .contacts__link {
   padding-top: 0;
   padding-bottom: 0;
