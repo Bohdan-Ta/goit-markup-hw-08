@@ -5,6 +5,7 @@
     line-height: 1.17;
     color: var(--second-color-link);
     text-decoration: none;
+    font-style: normal;
 }
 
 .logo_top_black {
@@ -12,7 +13,7 @@
 }
 
 .logo_footer {
-    // display: inline-block;
+    display: inline-block;
     margin-bottom: 20px;
     .logo_footer_white {
         color: var(--background-color);

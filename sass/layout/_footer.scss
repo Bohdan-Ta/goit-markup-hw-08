@@ -3,9 +3,37 @@
     padding-bottom: 60px;
     background: #2f303a;
     &__address {
-        width: 230px;
-        font-style: normal;
-        list-style-type: none;
+        @media screen and (max-width: 767px) {
+            width: 100%;
+            margin-bottom: 60px;
+            text-align: center;
+            font-style: normal;
+            list-style-type: none;
+        }
+        @media screen and (min-width: 768px) {
+            margin-right: 165px;
+            margin-bottom: 60px;
+        }
+        @media screen and (min-width: 1200px) {
+            width: 231px;
+            margin-right: 70px;
+            margin-bottom: 0;
+        }
+    }
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.footer-page__position {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+    }
+    @media screen and (min-width: 1200px) {
+        align-items: baseline;
+        margin-right: 93px;
     }
 }
 
@@ -14,7 +42,7 @@
 }
 
 .addres__link-google {
-    // display: inline-block;
+    display: inline-block;
     color: var(--background-color);
     text-decoration: none;
     line-height: 1.7;
@@ -41,9 +69,24 @@
 
 /*=====footer social block=====*/
 .footer-page__social {
-    // display: inline-block;
-    margin-left: 70px;
+    display: block;
     width: 206px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+
+    @media screen and (min-width: 768px) {
+        margin: 0;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 206px;
+
+        text-align: left;
+        font-style: normal;
+        list-style-type: none;
+    }
 }
 
 .social__title {
@@ -57,8 +100,10 @@
 }
 
 .flex-baseline {
-    // display: flex;
-    // align-items: baseline;
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        align-items: baseline;
+    }
 }
 
 .footer-page__social--ul {
@@ -85,19 +130,31 @@
 /*footer mail-block*/
 /*=============================*/
 .footer-page__sent-form {
-    // margin-left: 93px;
+    text-align: center;
+    margin: 0 auto;
+    @media screen and (min-width: 1200px) {
+        margin: 0;
+        text-align: left;
+    }
 }
 
 .sent-form_indent {
-    margin-right: 12px;
+    display: block;
+    margin-bottom: 20px;
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 0;
+        margin-right: 12px;
+    }
 }
 
 .sent-form_flex {
-    // display: flex;
+    @media screen and (min-width: 1200px) {
+        display: flex;
+    }
 }
 
 .sent-form__mail {
-    width: 100%;
+    width: 450px;
     height: 50px;
     padding: 15px;
     font-size: 16px;
@@ -110,12 +167,15 @@
     &:focus {
         color: var(--background-color);
     }
+    @media screen and (min-width: 1200px) {
+        width: 358px;
+    }
 }
 
 .sent-form__submit {
     position: relative;
     padding: 0px;
-    // padding-right: 28px;
+    padding-right: 28px;
     &:focus,
     &:hover {
         background: var(--btn-hover);

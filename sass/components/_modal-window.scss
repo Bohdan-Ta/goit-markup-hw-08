@@ -10,6 +10,10 @@
     padding: 40px;
     border-radius: 4px;
     background-color: var(--background-color);
+    @media screen and (max-width: 1199px) {
+        min-width: 450px;
+        min-height: 609px;
+    }
 }
 .modal-win__closed {
     position: absolute;

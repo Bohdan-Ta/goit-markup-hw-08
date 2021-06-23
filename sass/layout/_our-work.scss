@@ -1,6 +1,11 @@
 .our-work {
     display: none;
 }
+@media screen and (min-width: 1200px) {
+    .our-work {
+        display: block;
+    }
+}
 .section_padding {
     padding-top: 0;
 }

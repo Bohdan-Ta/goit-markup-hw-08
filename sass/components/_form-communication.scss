@@ -61,6 +61,9 @@
     margin-bottom: 30px;
     font-family: Roboto;
     line-height: 1.46;
+    @media screen and (max-width: 1199px) {
+        font-size: 12px;
+    }
 }
 .form-communication__btn {
     display: block;

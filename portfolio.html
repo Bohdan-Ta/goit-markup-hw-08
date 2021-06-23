@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=1600, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -13,33 +13,71 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
         integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
         crossorigin="anonymous" />
-
     <link rel="stylesheet" href="./css/main.min.css">
+
 </head>
 
 <body>
     <header class="header">
-        <div class="container flex ">
-            <nav class="flex">
-                <a class="logo logo_top" href="./index.html">Web<span class="logo_top_black">Studio</span></a>
-                <ul class="nav flex">
+        <div class="container header-container">
+            <a class="logo logo_top" href="./index.html">Web<span class="logo_top_black">Studio</span></a>
+            <button data-menu-button type="button" class="menu-mob__sandwich-btn">
+                <svg width="40px" height="40px" aria-label="Переключатель мобильного меню">
+                    <use href="./images/symbol-defs.svg#icon-menu_40px"></use>
+                </svg> </button>
+            <nav class="header-nav">
+                <ul class="header-nav__list">
                     <li class="nav__item"><a class="nav__link" href="./index.html">Студия</a></li>
                     <li class="nav__item"><a class="nav__link current" href="./portfolio.html">Портфолио</a></li>
                     <li class="nav__item"><a class="nav__link" href="">Контакты</a></li>
                 </ul>
             </nav>
-            <ul class="contacts flex">
-                <li class="contacts__item"><a class="contacts__link flex" href="mailto:info@devstudio.com">
-                        <svg class="contacts__icon-envelope" width="16px" height="12px">
+            <ul class="header-contacts">
+                <li class="contacts__item contacts__item-margin"><a class="contacts__link flex"
+                        href="mailto:info@devstudio.com">
+                        <svg class="contacts__icon-envelope">
                             <use href="./images/symbol-defs.svg#icon-envelope"> </use>
                         </svg>info@devstudio.com</a>
                 </li>
                 <li class="contacts__item"><a class="contacts__link flex" href="tel:+380961111111">
-                        <svg class="contacts__icon-phone" width="10px" height="16px">
+                        <svg class="contacts__icon-phone">
                             <use href="./images/symbol-defs.svg#icon-smartphone"> </use>
                         </svg>+38 096 111 11 11</a>
                 </li>
             </ul>
+        </div>
+        <div data-menu class="menu-mob">
+            <div class="menu-mob__container">
+                <button data-menu-close type="button" class="menu-mob__close-btn">
+                    <svg width="40px" height="40px" aria-label="Кнопка закрытия мобильного меню">
+                        <use class="icon-mob-close" href="./images/symbol-defs.svg#icon-close_40px"></use>
+                    </svg> </button>
+                <ul class="menu-mob__nav">
+                    <li class="menu-mob__item"><a class="nav__link" href="./index.html">Студия</a></li>
+                    <li class="menu-mob__item"><a class="nav__link" href="./portfolio.html">Портфолио</a></li>
+                    <li class="menu-mob__item"><a class="nav__link" href="">Контакты</a></li>
+                </ul>
+                <ul class="menu-mob__contacts">
+                    <li class="menu-mob__contacts-item"><a class="menu-mob__tel-link link" href="tel:+380961111111">+38
+                            096 111
+                            11 11</a>
+                    </li>
+                    <li class="menu-mob__contacts-item"><a class="menu-mob__mail-link link"
+                            href="mailto:info@devstudio.com">info@devstudio.com</a>
+                    </li>
+                </ul>
+                <ul class="menu-mob__social">
+                    <li class=menu-mob__social-item><a class="menu-mob__social-link link" href="">Instagram</a></li>
+                    <span class="vertical-line"></span>
+                    <li class=menu-mob__social-item>
+                        <a class="menu-mob__social-link link" href="">Twitter</a>
+                    </li>
+                    <span class="vertical-line"></span>
+                    <li class=menu-mob__social-item><a class="menu-mob__social-link link" href="">Facebook</a></li>
+                    <span class="vertical-line"></span>
+                    <li class=menu-mob__social-item><a class="menu-mob__social-link link" href="">Linkedin</a></li>
+                </ul>
+            </div>
         </div>
     </header>
     <main>
@@ -65,12 +103,21 @@
                     <li class="portfolio__cards">
                         <a href="" class="portfolio__cards__container">
                             <div class="portfolio__overlay">
-                                <img src="./images/img-notebok.jpg" alt="notebook" width="370" height="294" />
-                                <p class="portfolio__overlay__text">Технокряк это современная площадка распространения
+                                <picture class="picture">
+                                    <source srcset="./images/notebook/img-notebook-desk.jpg 1x,
+                                        ./images/notebook/img-notebook-desk@2x.jpg 2x," media="(min-width: 1200px)">
+                                    <source srcset="./images/notebook/img-notebook-tab.jpg 1x,
+                                        ./images/notebook/img-notebook-tab@2x.jpg 2x," media="(min-width: 768px)">
+                                    <source srcset="./images/notebook/img-notebook-mob.jpg 1x,
+                                        ./images/notebook/img-notebook-mob@2x.jpg 2x," media="(max-width: 767px)">
+                                    <img src="./images/notebook/img-notebok.jpg" alt="notebook" />
+                                </picture>
+                                <p class="portfolio__overlay__text">Технокряк это современная площадка
+                                    распространения
                                     коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на
                                     защищённые сервера конкурентов.</p>
                             </div>
-                            <div class="portfolio__cards--botton">
+                            <div class="portfolio__cards--botton botton-for-tab">
                                 <h2 class="portfolio__cards--title">Технокряк</h2>
                                 <p class="portfolio__cards--text">Веб-сайт</p>
                             </div>
@@ -79,8 +126,15 @@
                     <li class="portfolio__cards">
                         <a href="" class="portfolio__cards__container">
                             <div class="portfolio__overlay">
-                                <img src="./images/img-desine.jpg" alt="mens play basketball" width="370"
-                                    height="294" />
+                                <picture class="picture">
+                                    <source srcset="./images/desine/img-desine-desk.jpg 1x,
+                                        ./images/desine/img-desine-desk@2x.jpg 2x," media="(min-width: 1200px)">
+                                    <source srcset="./images/desine/img-desine-tab.jpg 1x,
+                                        ./images/desine/img-desine-tab@2x.jpg 2x," media="(min-width: 768px)">
+                                    <source srcset="./images/desine/img-desine-mob.jpg 1x,
+                                        ./images/desine/img-desine-mob@2x.jpg 2x," media="(max-width: 767px)">
+                                    <img src="./images/desine/img-desine.jpg" alt="mens play basketball" />
+                                </picture>
                                 <p class="portfolio__overlay__text"></p>
                             </div>
                             <div class="portfolio__cards--botton">
@@ -92,7 +146,16 @@
                     <li class="portfolio__cards">
                         <a href="" class="portfolio__cards__container">
                             <div class="portfolio__overlay">
-                                <img src="./images/img-restaurant.jpg" alt="shark" width="370" height="294" />
+                                <picture class="picture">
+                                    <source srcset="./images/restaurant/img-restaurant-desk.jpg 1x,
+                                        ./images/restaurant/img-restaurant-desk@2x.jpg 2x,"
+                                        media="(min-width: 1200px)">
+                                    <source srcset="./images/restaurant/img-restaurant-tab.jpg 1x,
+                                        ./images/restaurant/img-restaurant-tab@2x.jpg 2x," media="(min-width: 768px)">
+                                    <source srcset="./images/restaurant/img-restaurant-mob.jpg 1x,
+                                        ./images/restaurant/img-restaurant-mob@2x.jpg 2x," media="(max-width: 767px)">
+                                    <img src="./images/restaurant/img-restaurant.jpg" alt="shark" />
+                                </picture>
                                 <p class="portfolio__overlay__text"></p>
                             </div>
                             <div class="portfolio__cards--botton">
@@ -104,7 +167,15 @@
                     <li class="portfolio__cards">
                         <a href="" class="portfolio__cards__container">
                             <div class="portfolio__overlay">
-                                <img src="./images/img-airpods.jpg" alt="airpods" width="370" height="294" />
+                                <picture class="picture">
+                                    <source srcset="./images/airpods/img-airpods-desk.jpg 1x,
+                                        ./images/airpods/img-airpods-desk@2x.jpg 2x," media="(min-width: 1200px)">
+                                    <source srcset="./images/airpods/img-airpods-tab.jpg 1x,
+                                        ./images/airpods/img-airpods-tab@2x.jpg 2x," media="(min-width: 768px)">
+                                    <source srcset="./images/airpods/img-airpods-mob.jpg 1x,
+                                        ./images/airpods/img-airpods-mob@2x.jpg 2x," media="(max-width: 767px)">
+                                    <img src="./images/airpods/img-airpods.jpg" alt="airpods" />
+                                </picture>
                                 <p class="portfolio__overlay__text"></p>
                             </div>
                             <div class="portfolio__cards--botton">
@@ -116,7 +187,15 @@
                     <li class="portfolio__cards">
                         <a href="" class="portfolio__cards__container">
                             <div class="portfolio__overlay">
-                                <img src="./images/img-boxes.jpg" alt="two boxes" width="370" height="294" />
+                                <picture class="picture">
+                                    <source srcset="./images/boxes/img-boxes-desk.jpg 1x,
+                                        ./images/boxes/img-boxes-desk@2x.jpg 2x," media="(min-width: 1200px)">
+                                    <source srcset="./images/boxes/img-boxes-tab.jpg 1x,
+                                        ./images/boxes/img-boxes-tab@2x.jpg 2x," media="(min-width: 768px)">
+                                    <source srcset="./images/boxes/img-boxes-mob.jpg 1x,
+                                        ./images/boxes/img-boxes-mob@2x.jpg 2x," media="(max-width: 767px)">
+                                    <img src="./images/boxes/img-boxes.jpg" alt="two boxes" />
+                                </picture>
                                 <p class="portfolio__overlay__text"></p>
                             </div>
                             <div class="portfolio__cards--botton">
@@ -128,7 +207,15 @@
                     <li class="portfolio__cards">
                         <a href="" class="portfolio__cards__container">
                             <div class="portfolio__overlay">
-                                <img src="./images/img-monitor.jpg" alt="monitor" width="370" height="294" />
+                                <picture class="picture">
+                                    <source srcset="./images/monitor/img-monitor-desk.jpg 1x,
+                                        ./images/monitor/img-monitor-desk@2x.jpg 2x," media="(min-width: 1200px)">
+                                    <source srcset="./images/monitor/img-monitor-tab.jpg 1x,
+                                        ./images/monitor/img-monitor-tab@2x.jpg 2x," media="(min-width: 768px)">
+                                    <source srcset="./images/monitor/img-monitor-mob.jpg 1x,
+                                        ./images/monitor/img-monitor-mob@2x.jpg 2x," media="(max-width: 767px)">
+                                    <img src="./images/monitor/img-monitor.jpg" alt="monitor" />
+                                </picture>
                                 <p class="portfolio__overlay__text"></p>
                             </div>
                             <div class="portfolio__cards--botton">
@@ -140,7 +227,15 @@
                     <li class="portfolio__cards">
                         <a href="" class="portfolio__cards__container">
                             <div class="portfolio__overlay">
-                                <img src="./images/img-magazine.jpg" alt="magazine" width="370" height="294" />
+                                <picture class="picture">
+                                    <source srcset="./images/magazine/img-magazine-desk.jpg 1x,
+                                        ./images/magazine/img-magazine-desk@2x.jpg 2x," media="(min-width: 1200px)">
+                                    <source srcset="./images/magazine/img-magazine-tab.jpg 1x,
+                                        ./images/magazine/img-magazine-tab@2x.jpg 2x," media="(min-width: 768px)">
+                                    <source srcset="./images/magazine/img-magazine-mob.jpg 1x,
+                                        ./images/magazine/img-magazine-mob@2x.jpg 2x," media="(max-width: 767px)">
+                                    <img src="./images/magazine/img-magazine.jpg" alt="magazine" />
+                                </picture>
                                 <p class="portfolio__overlay__text"></p>
                             </div>
                             <div class="portfolio__cards--botton">
@@ -152,7 +247,15 @@
                     <li class="portfolio__cards">
                         <a href="" class="portfolio__cards__container">
                             <div class="portfolio__overlay">
-                                <img src="./images/img-label.jpg" alt="label" width="370" height="294" />
+                                <picture class="picture">
+                                    <source srcset="./images/label/img-label-desk.jpg 1x,
+                                        ./images/label/img-label-desk@2x.jpg 2x," media="(min-width: 1200px)">
+                                    <source srcset="./images/label/img-label-tab.jpg 1x,
+                                        ./images/label/img-label-tab@2x.jpg 2x," media="(min-width: 768px)">
+                                    <source srcset="./images/label/img-label-mob.jpg 1x,
+                                        ./images/label/img-label-mob@2x.jpg 2x," media="(max-width: 767px)">
+                                    <img src="./images/label/img-label.jpg" alt="label" />
+                                </picture>
                                 <p class="portfolio__overlay__text"></p>
                             </div>
                             <div class="portfolio__cards--botton">
@@ -164,7 +267,18 @@
                     <li class="portfolio__cards">
                         <a href="" class="portfolio__cards__container">
                             <div class="portfolio__overlay">
-                                <img src="./images/img-notebok-grey.jpg" alt="notebook" width="370" height="294" />
+                                <picture class="picture">
+                                    <source srcset="./images/notebook-grey/img-notebook-grey-desk.jpg 1x,
+                                        ./images/notebook-grey/img-notebook-grey-desk@2x.jpg 2x,"
+                                        media="(min-width: 1200px)">
+                                    <source srcset="./images/notebook-grey/img-notebook-grey-tab.jpg 1x,
+                                        ./images/notebook-grey/img-notebook-grey-tab@2x.jpg 2x," media="(min-width:
+                                        768px)">
+                                    <source srcset="./images/notebook-grey/img-notebook-grey-mob.jpg 1x,
+                                        ./images/notebook-grey/img-notebook-grey-mob@2x.jpg 2x,"
+                                        media="(max-width: 767px)">
+                                    <img src="./images/notebook-grey/img-notebok-grey.jpg" alt="notebook" />
+                                </picture>
                                 <p class="portfolio__overlay__text"></p>
                             </div>
                             <div class="portfolio__cards--botton">
@@ -179,36 +293,41 @@
     </main>
     <footer class="footer-page">
         <div class="container flex-baseline">
-            <address class="footer-page__address">
-                <a class="logo logo_footer" href="./index.html">Web<span class="logo_footer_white">Studio</span></a>
-                <ul class="address__ul">
-                    <li class="address__list"><a class="addres__link-google"
-                            href="https://goo.gl/maps/QsSSM6Vuw5GDu2TJ9" target="_blank" rel="noopener noreferrer">г.
-                            Киев, пр-т Леси Украинки, 26</a></li>
-                    <li class="address__list"><a class="addres__link-contact"
-                            href="mailto:info@devstudio.com">info@devstudio.com</a>
-                    </li>
-                    <li><a class="addres__link-contact" href="tel:+380961111111">+38 096 111 11 11</a>
-                    </li>
-                </ul>
-            </address>
-            <div class="footer-page__social">
-                <p class="social__title">присоединяйтесь</p>
-                <ul class="footer-page__social--ul list">
-                    <li><a class="footer-page__social--list" href=""><svg width="20px" height="20px">
-                                <use href="./images/symbol-defs.svg#icon-instagram"></use>
-                            </svg></a></li>
-                    <li><a class="footer-page__social--list" href=""><svg width="20px" height="20px">
-                                <use href="./images/symbol-defs.svg#icon-twitter"></use>
-                            </svg></a></li>
-                    <li><a class="footer-page__social--list" href=""><svg width="20px" height="20px">
-                                <use href="./images/symbol-defs.svg#icon-facebook"></use>
-                            </svg></a></li>
-                    <li><a class="footer-page__social--list" href=""><svg width="20px" height="20px">
-                                <use href="./images/symbol-defs.svg#icon-linkedin"></use>
-                            </svg></a></li>
-                </ul>
+
+            <div class="footer-page__position">
+                <address class="footer-page__address">
+                    <a class="logo logo_footer" href="./index.html">Web<span class="logo_footer_white">Studio</span></a>
+                    <ul class="address__ul">
+                        <li class="address__list"><a class="addres__link-google"
+                                href="https://goo.gl/maps/QsSSM6Vuw5GDu2TJ9" target="_blank"
+                                rel="noopener noreferrer">г.
+                                Киев, пр-т Леси Украинки, 26</a></li>
+                        <li class="address__list"><a class="addres__link-contact"
+                                href="mailto:info@devstudio.com">info@devstudio.com</a>
+                        </li>
+                        <li><a class="addres__link-contact" href="tel:+380961111111">+38 096 111 11 11</a>
+                        </li>
+                    </ul>
+                </address>
+                <div class="footer-page__social">
+                    <p class="social__title">присоединяйтесь</p>
+                    <ul class="footer-page__social--ul list">
+                        <li><a class="footer-page__social--list" href=""><svg width="20px" height="20px">
+                                    <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                                </svg></a></li>
+                        <li><a class="footer-page__social--list" href=""><svg width="20px" height="20px">
+                                    <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                                </svg></a></li>
+                        <li><a class="footer-page__social--list" href=""><svg width="20px" height="20px">
+                                    <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                                </svg></a></li>
+                        <li><a class="footer-page__social--list" href=""><svg width="20px" height="20px">
+                                    <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                                </svg></a></li>
+                    </ul>
+                </div>
             </div>
+
             <div class="footer-page__sent-form">
                 <p class="social__title">подпишитесь на рассылку</p>
                 <form class="sent-form_flex">
@@ -221,7 +340,10 @@
                 </form>
             </div>
         </div>
+        </div>
     </footer>
+    <script src="./JS/menu-mob.js"></script>
+
 </body>
 
 </html>
