@@ -272,19 +272,11 @@ img {
   padding-top: 200px;
   padding-bottom: 200px;
   background-color: var(--background-hero);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/img-hero/img-hero-mob.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  min-height: 400px;
-  background-image: url("../images/img-hero/img-hero-mob.jpg");
-}
-
-@media screen and (min-width: 1200px) {
-  .hero {
-    max-width: 1600px;
-    height: 600px;
-  }
+  height: 400px;
 }
 
 @media (min-device-pixel-ratio: 2) and (max-width: 767px), (min-resolution: 192dpi) and (max-width: 767px), (min-resolution: 2dppx) and (max-width: 767px) {
@@ -316,6 +308,13 @@ img {
 @media (min-device-pixel-ratio: 2) and (min-width: 1200px), (min-resolution: 192dpi) and (min-width: 1200px), (min-resolution: 2dppx) and (min-width: 1200px) {
   .hero {
     background-image: url("../images/img-hero/img-hero-desk@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    max-width: 1600px;
+    height: 600px;
   }
 }
 
@@ -957,8 +956,8 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-width: 528px;
-  min-height: 581px;
+  width: 95%;
+  height: 581px;
   margin-left: auto;
   margin-right: auto;
   padding: 40px;
@@ -966,10 +965,17 @@ img {
   background-color: var(--background-color);
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 480px) {
   .modal-win {
-    min-width: 450px;
-    min-height: 609px;
+    width: 450px;
+    height: 609px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-win {
+    width: 528px;
+    height: 581px;
   }
 }
 
@@ -1325,6 +1331,9 @@ img {
     padding-top: 48px;
     padding-bottom: 48px;
     padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
   .menu-mob__sandwich-btn {
     padding: 0;
@@ -1380,6 +1389,7 @@ img {
   }
   .menu-mob__social {
     display: flex;
+    flex-wrap: wrap;
     font-size: 18px;
   }
   .menu-mob__social-link {
@@ -1393,11 +1403,9 @@ img {
     border: 1px solid;
     border-color: rgba(33, 33, 33, 0.2);
   }
-  .menu-mob__nav {
-    margin-bottom: 302px;
-  }
   .menu-mob__contacts {
     margin-bottom: 64px;
+    margin-top: auto;
   }
 }
 

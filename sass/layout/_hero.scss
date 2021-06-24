@@ -5,17 +5,12 @@
     padding-top: 200px;
     padding-bottom: 200px;
     background-color: var(--background-hero);
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url("../images/img-hero/img-hero-mob.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    min-height: 400px;
-    // max-width: 1600px;
-    background-image: url("../images/img-hero/img-hero-mob.jpg");
-    @media screen and (min-width: 1200px) {
-        max-width: 1600px;
-        height: 600px;
-    }
+    height: 400px;
 }
 
 @media (min-device-pixel-ratio: 2) and (max-width: 767px),
@@ -55,7 +50,12 @@
         background-image: url("../images/img-hero/img-hero-desk@2x.jpg");
     }
 }
-
+@media screen and (min-width: 1200px) {
+    .hero {
+        max-width: 1600px;
+        height: 600px;
+    }
+}
 .hero__heading {
     margin-bottom: 30px;
     padding: 0;

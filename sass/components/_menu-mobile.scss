@@ -18,6 +18,9 @@
             padding-top: 48px;
             padding-bottom: 48px;
             padding-left: 40px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
         &__sandwich-btn {
@@ -81,6 +84,7 @@
         }
         &__social {
             display: flex;
+            flex-wrap: wrap;
             font-size: 18px;
         }
         &__social-link {
@@ -95,11 +99,10 @@
             border-color: rgba(33, 33, 33, 0.2);
         }
     }
-    .menu-mob__nav {
-        margin-bottom: 302px;
-    }
+
     .menu-mob__contacts {
         margin-bottom: 64px;
+        margin-top: auto;
     }
 }
 @media screen and (min-width: 768px) {
