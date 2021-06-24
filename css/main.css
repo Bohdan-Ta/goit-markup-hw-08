@@ -342,7 +342,8 @@ img {
   width: 200px;
   height: 50px;
   text-align: center;
-  padding: 10px 31px;
+  white-space: nowrap;
+  padding: 10px 32px;
   margin-left: auto;
   margin-right: auto;
   font-family: Roboto;
